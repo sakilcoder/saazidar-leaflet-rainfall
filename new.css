@@ -1,0 +1,136 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#info {
+  /* margin: 5px 5px 5px 0; */
+  height: 100%;
+  width: 20%;
+  float: left;
+  /* background-color: #CCC; */
+  margin:0;
+  padding-top: 10px;
+  overflow-x: auto;
+}
+
+#map {
+  width: 80%;
+  height: 100%;
+  /* float:right; */
+  margin: 0;
+}
+
+
+
+#info_text {
+  font-weight: bold;
+  font-size: 16px;
+
+}
+
+#filtersdiv {
+  /* margin-top: 5px;
+      margin-left : 80px; */
+  z-index: 2000;
+  position: relative;
+  /* display: flex;
+      background-color: rgba(255, 255, 255, 0.281); */
+  max-width: 300px;
+  max-height: 200px;
+  text-align: center;
+  /* min-h: 330px; */
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+}
+
+.left-control {
+  background: #fff;
+  border: 1px solid #CCC;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 350px;
+
+}
+
+.leaflet-left .leaflet-control {
+  margin-left: 0px;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 0px;
+}
+
+.map-label-title {
+  order: 1;
+  /* position: absolute; */
+  /* top: -50px; */
+  /* right: 100px; */
+  background-color: #fff;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+  white-space: nowrap;
+}
+
+/*Wraperclass for the divicon*/
+.map-label {
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/*Wrap the content of the divicon (text) in this class*/
+.map-label-content {
+  order: 1;
+  position: relative; 
+  left: -50%;
+  background-color: #fff;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+  white-space: nowrap;
+  
+}
+
+/* .map-label-title {
+  order: 1;
+  position: relative; 
+  background-color: #fff;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+  white-space: nowrap;
+  
+} */
+
+
+/*Instance classes*/
+.map-label.inactive {
+  opacity: 0.5;
+}
+
+.map-label.redborder > .map-label-content {
+  border-color: #e00;
+}
+.map-label.redborder > .map-label-arrow {
+  border-top-color: #e00;
+}
+
+.map-label.redbackground > .map-label-content {
+  white-space: default;
+  color: #fff;
+  background-color: #e00;
+}
+
+
